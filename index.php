@@ -1,0 +1,8 @@
+<html>
+	<body>
+		<h1> Hola mundo! </h1>
+		<?php
+			echo "Hola PHP";
+		?>
+	</body>
+</html>
