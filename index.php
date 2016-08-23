@@ -20,9 +20,8 @@
 					$cont7 = 0;
 					$cont8 = 0;
 					$cont9 = 0;
+
 				for ($i=0; $i < $veces; $i++) {
-
-
 
 					$x = rand(0, 9);
 					//echo "$x </br>";
@@ -56,7 +55,21 @@
 							break;
 
 							case '7':
-							$cont7++;
+							
+							//if((($cont7 * 100)/$veces)>= 5)
+							//{
+							//	$veces++
+							//}
+							if((($cont7 * 100)/$veces) < 5)
+							{
+								
+								$cont7++;
+							}
+							else
+							{
+								$i--;
+								continue;
+							}
 							break;
 
 							case '8':
