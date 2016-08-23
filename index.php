@@ -20,11 +20,37 @@
 					$cont7 = 0;
 					$cont8 = 0;
 					$cont9 = 0;
+					
+
+				for ($j=0; $j < 10; $j++) { 
+
+					$contador[$j]=0;	
+				}
+
 
 				for ($i=0; $i < $veces; $i++) {
 
 					$x = rand(0, 9);
 					//echo "$x </br>";
+
+
+
+				if($x == 7)
+				{
+				  if((($contador[$x] * 100)/$veces) < 5) 
+					{
+												
+						$contador[$x]++;
+						continue;
+					}
+					else
+					{
+						$i--;
+						continue;
+					}
+				}
+					$contador[$x] ++;
+					/*
 					switch ($x) {
 						case '0':
 							$cont0++;
@@ -60,16 +86,7 @@
 							//{
 							//	$veces++
 							//}
-							if((($cont7 * 100)/$veces) < 5)
-							{
-								
-								$cont7++;
-							}
-							else
-							{
-								$i--;
-								continue;
-							}
+							
 							break;
 
 							case '8':
@@ -84,19 +101,19 @@
 						default:
 							# code...
 							break;
-					}
-				}
+					}*/
+				//}
 
-				echo "porcentaje: de 0 : %" . ($cont0 * 100)/$veces . " es decir: $cont0 vez/es." . "</br>";
-				echo "porcentaje: de 1 : %" . ($cont1 * 100)/$veces . " es decir: $cont1 vez/es." . "</br>";
-				echo "porcentaje: de 2 : %" . ($cont2 * 100)/$veces . " es decir: $cont2 vez/es." . "</br>";
-				echo "porcentaje: de 3 : %" . ($cont3 * 100)/$veces . " es decir: $cont3 vez/es." . "</br>";
-				echo "porcentaje: de 4 : %" . ($cont4 * 100)/$veces . " es decir: $cont4 vez/es." . "</br>";
-				echo "porcentaje: de 5 : %" . ($cont5 * 100)/$veces . " es decir: $cont5 vez/es." . "</br>";
-				echo "porcentaje: de 6 : %" . ($cont6 * 100)/$veces . " es decir: $cont6 vez/es." . "</br>";
-				echo "porcentaje: de 7 : %" . ($cont7 * 100)/$veces . " es decir: $cont7 vez/es." . "</br>";
-				echo "porcentaje: de 8 : %" . ($cont8 * 100)/$veces . " es decir: $cont8 vez/es." . "</br>";
-				echo "porcentaje: de 9 : %" . ($cont9 * 100)/$veces . " es decir: $cont9 vez/es." . "</br>";
+				echo "porcentaje: de 0 : %" . ($contador[$x] * 100)/$veces . " es decir: $cont0 vez/es." . "</br>";
+				echo "porcentaje: de 1 : %" . ($contador[$x] * 100)/$veces . " es decir: $cont1 vez/es." . "</br>";
+				echo "porcentaje: de 2 : %" . ($contador[$x] * 100)/$veces . " es decir: $cont2 vez/es." . "</br>";
+				echo "porcentaje: de 3 : %" . ($contador[$x] * 100)/$veces . " es decir: $cont3 vez/es." . "</br>";
+				echo "porcentaje: de 4 : %" . ($contador[$x] * 100)/$veces . " es decir: $cont4 vez/es." . "</br>";
+				echo "porcentaje: de 5 : %" . ($contador[$x] * 100)/$veces . " es decir: $cont5 vez/es." . "</br>";
+				echo "porcentaje: de 6 : %" . ($contador[$x] * 100)/$veces . " es decir: $cont6 vez/es." . "</br>";
+				echo "porcentaje: de 7 : %" . ($contador[$x] * 100)/$veces . " es decir: $cont7 vez/es." . "</br>";
+				echo "porcentaje: de 8 : %" . ($contador[$x] * 100)/$veces . " es decir: $cont8 vez/es." . "</br>";
+				echo "porcentaje: de 9 : %" . ($contador[$x] * 100)/$veces . " es decir: $cont9 vez/es." . "</br>";
 
 			?>
 	</body>
