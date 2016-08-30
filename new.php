@@ -3,6 +3,7 @@
 		<title> ejercicio con POO </title>
 
 		<?php
+		
 
 			abstract class FiguraGeometrica
 			{
@@ -22,16 +23,16 @@
 				}
 
 
-				public function __construct()
+				public function __construct($color)
 			    {
-			        
+			        this.$_color = $color;
 			    }
 
 
 				abstract protected function Calcular();
 				
 
-				abstract public function Dibujo();
+				abstract public function Dibujo($lado1, $lado2);
 				
 
 
