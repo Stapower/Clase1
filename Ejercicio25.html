@@ -1,0 +1,106 @@
+<head>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" type="text/css" href="animacion.css">
+
+</head>
+
+<!--<div class="CajaInicio animated bounce">-->
+<table>
+	<form action="Ejercicio25.php" method="Post"
+		 >
+
+	
+		 <tr>
+		 	<td>
+				<label> Base: </label>
+			</td>
+
+			<td>
+			 	<input type= "text" name="Base" ID="FormIngreso">
+			</td>
+		</tr>
+
+
+
+		 <tr>
+		 	<td>
+				<label> Alutra: </label>
+			</td>
+			
+			<td>
+			 	<input tpye="text" name="Altura" ID="FormIngreso" value="87">
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<td>
+				<input type="Submit" class="MiBotonUTN">
+			</td>
+		</tr>
+	
+
+	</form>
+</table>
+
+</br>
+</br>
+
+<table>
+	<form method="Post">
+
+	
+		 <tr>
+		 	<td>
+				<label> Base: </label>
+			</td>
+
+			<td>
+			 	<input type= "text" name="Base" ID="FormIngreso" placeholder = "Ingrese Base">
+			</td>
+		</tr>
+
+
+
+		 <tr>
+		 	<td>
+				<label> Alutra: </label>
+			</td>
+			
+			<td>
+			 	<input tpye="text" name="Altura" ID="FormIngreso" placeholder="Ingrese altura">
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<td>
+				<input type="Submit" class="MiBotonUTN" name="btn">
+			</td>
+		</tr>
+	
+
+	</form>
+</table>
+
+
+
+<input type = "text" name="Resultado">
+
+<?php
+
+ if(isset($_REQUEST["btn"]))
+ {
+
+
+ 	"Resultado" = (($_REQUST["Base"] * $_REQUST["Altura"])*2);
+ }
+
+
+?>
+
+
+
+
+
+<!--</div>-->
