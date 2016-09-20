@@ -6,13 +6,13 @@ var_dump($_FILES);
 if(isset($_FILES["foto"]))
 {
 	if($_FILES["foto"]['error'])
-		{
-			echo "error en imagen";
-		}
+	{
+		echo "error en imagen";
+	}
 	else
 	{
 		$tamanio =$_FILES['foto']['size'];
-    	if($tamanio>1024000)
+    	if($tamanio>700000)
     	{
     			echo"Error, archvio muy grande.";
     	}
@@ -39,8 +39,12 @@ if(isset($_FILES["foto"]))
 						$destino = "fotos/". $_POST['nombre'].".".$Extension;
 						$foto=$_POST['nombre'].".".$Extension;
 						//MUEVO EL ARCHIVO DEL TEMPORAL AL DESTINO FINAL
-    					if (move_uploaded_file($_FILES["foto"]["tmp_name"],$destino))
+    					if (1==1)//(move_uploaded_file($_FILES["foto"]["tmp_name"],$destino))
     					{		
+
+    						$destino2 = "fotos/fotos2/lalala.gif";
+							move_uploaded_file($_FILES["foto"]["tmp_name"],$destino2);
+
       						 echo "ok";
       					}
       					else
@@ -52,7 +56,6 @@ if(isset($_FILES["foto"]))
     	}
     }
 }
-
 
 
 ?>
