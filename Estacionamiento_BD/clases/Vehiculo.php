@@ -59,7 +59,7 @@ class Vehiculo
 //--CONSTRUCTOR
 	public function __construct($patente=NULL)
 	{
-		if($dni != NULL){
+		if($patente != NULL){
 			$obj = Vehiculo::TraerUnVehiculo($patente);
 			
 			$this->patente = $obj->patente;

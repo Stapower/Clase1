@@ -39,14 +39,14 @@ CREATE TABLE IF NOT EXISTS `Vehiculo` (
 --
 
 INSERT INTO `Vehiculo` (`id`, `patente`, `fechaEntrada`, `fechaSalida`, `foto`) VALUES
-(4, 'asd123', 'datetime', '333333', '333333.jpg'),
-(5, 'Bañera', 'Giratoria', '222222', '222222.jpg'),
-(6, 'Julieta', 'Roberto', '888888', '888888.jpg'),
-(7, 'Tomas', 'Crucero', '777777', '777777.jpg'),
-(8, 'Alfredo', 'Mercurio', '999999', '999999.jpg'),
-(9, 'Jaime', 'Marrón', '555555', '555555.jpg'),
-(10, 'Esteban', 'Trabajos', '111111', '111111.jpg'),
-(11, 'Miguel', 'Zorro', '444444', '444444.jpg');
+(4, 'asd123', '2016/05/12', '2016/05/15', '333333.jpg'),
+(5, 'Bañera', '2016/05/12', '2016/05/13', '222222.jpg'),
+(6, 'Julieta', '2016/05/12', '2016/05/14', '888888.jpg'),
+(7, 'Tomas', '2016/05/12', '2016/05/13', '777777.jpg'),
+(8, 'Alfredo', '2016/05/12', '2016/05/13', '999999.jpg'),
+(9, 'Jaime', '2016/05/12', '2016/05/13', '555555.jpg'),
+(10, 'Esteban', '2016/05/12', '2016/05/13', '111111.jpg'),
+(11, 'Miguel', '2016/05/12', '2016/05/13', '444444.jpg');
 
 --
 -- Índices para tablas volcadas
@@ -55,7 +55,7 @@ INSERT INTO `Vehiculo` (`id`, `patente`, `fechaEntrada`, `fechaSalida`, `foto`) 
 --
 -- Indices de la tabla `persona`
 --
-ALTER TABLE `persona`
+ALTER TABLE `Vehiculo`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -65,7 +65,7 @@ ALTER TABLE `persona`
 --
 -- AUTO_INCREMENT de la tabla `persona`
 --
-ALTER TABLE `persona`
+ALTER TABLE `Vehiculo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

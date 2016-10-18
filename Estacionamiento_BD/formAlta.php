@@ -21,12 +21,12 @@
 
 	 ?>
 <?php     
-	require_once("clases\Personas.php");
+	require_once("clases\Vehiculo.php");
 
 	$titulo = "ALTA";
 	if(isset($_POST['dniParaModificar'])) //viene de la grilla
 	{
-		$unaPersona = Persona::TraerUnaPersona($_POST['dniParaModificar']);
+		$unaPersona = Vehiculo::TraerUnVehiculo($_POST['dniParaModificar']);
 		$titulo = "MODIFICACIÓN";
 	} 
 ?>
@@ -38,9 +38,9 @@
 			<h1> <?php echo $titulo; ?> </h1>
 
 			<form id="FormIngreso" method="post" action="formAlta.php" enctype="multipart/form-data" >
-				<input type="text" name="apellido" id="apellido" placeholder="ingrese apellido" value="<?php echo isset($unaPersona) ?  $unaPersona->GetApellido() : "" ; ?>" /><span id="lblApellido" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>
-				<input type="text" name="nombre" id="nombre" placeholder="ingrese nombre" value="<?php echo isset($unaPersona) ?  $unaPersona->GetNombre() : "" ; ?>" /> <span id="lblNombre" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>
-				<input type="text" name="dni" id="dni" placeholder="ingrese dni" value="<?php echo isset($unaPersona) ?  $unaPersona->GetDni() : "" ; ?>" <?php echo isset($unaPersona) ?  "readonly": "" ; ?>        /> <span id="lblDni" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>
+				<input type="text" name="apellido" id="apellido" placeholder="ingrese fecha entrada" value="<?php echo isset($unaPersona) ?  $unaPersona->GetApellido() : "" ; ?>" /><span id="lblApellido" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>
+				<input type="text" name="nombre" id="nombre" placeholder="ingrese fecha salida" value="<?php echo isset($unaPersona) ?  $unaPersona->GetNombre() : "" ; ?>" /> <span id="lblNombre" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>
+				<input type="text" name="dni" id="dni" placeholder="ingrese patente" value="<?php echo isset($unaPersona) ?  $unaPersona->GetDni() : "" ; ?>" <?php echo isset($unaPersona) ?  "readonly": "" ; ?>        /> <span id="lblDni" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>
 				<?php echo isset($unaPersona) ? 	"<p style='color: black;'>*El DNI no se puede modificar.</p> ": "" ; ?>
 				<input type="hidden" name="idOculto" value="<?php echo isset($unaPersona) ? $unaPersona->GetId() : "" ; ?>" />
 				<input type="file" name="foto" />
@@ -151,12 +151,12 @@ if(isset($_POST['agregar']) && $_POST['agregar'] === "Guardar")// si esto no se 
 	}
 	else// si es un alta
 	{
-		$p = new Persona();	
+		$p = new Vehiculo();	
 		$p->SetFoto($foto);
-		$p->SetApellido($_POST['apellido']);
-		$p->SetNombre($_POST['nombre']);
-		$p->SetDni($_POST['dni']);
-		persona::Insertar($p);
+		$p->SetSalida($_POST['apellido']);
+		$p->SetEntrada($_POST['nombre']);
+		$p->SetPatente($_POST['dni']);
+		Vehiculo::Insertar($p);
 
 	}	
 }
