@@ -17,13 +17,15 @@
 		<label> Contraseña: </label>
 		<input type="text" name="pass" id="pass">
 
-		
+		<!--Hacer checkbox que sea Recordarme ENTRA EN PARCIAL
+		si no està marrcado se borrará la cookie (setearla en tiempo
+		negativo)-->
 	
 
 	</form>
 
 <input type="submit" class="MiBotonUTN" name="Entrar" onclick = "Llamada()">
-	
+
 </div>
 
 

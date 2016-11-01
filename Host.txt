@@ -1,0 +1,11 @@
+HACER HOST DE UNA PÁGINA EN CUALQUIER SERVICIO WEB GRATUITO
+TUARS
+00WEBHOSTS
+HOSTINGER
+
+sacar un usuario en alguna página 
+subir archivos por ftp.
+subir .rar y descomprimirlo dentro del host
+phpmyadmin, crear base de datos
+modificar php para que se conecte a base de datos, cambiarle la direccion del servidor, el usuario y el pasword, los genera la página web
+ABM PHP

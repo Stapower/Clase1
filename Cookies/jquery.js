@@ -20,22 +20,16 @@ function Llamada()
 		.then(function(respuesta)
 		{
 			alert("volvió");
-		console.log(respuesta);
+			console.log(respuesta);
 			//alert(respuesta);
 
-			var objSon = JSON.parse(respuesta);
+			//var objSon = JSON.parse(respuesta);
 			
-			console.log(objSon);
-			alert(objSon.Usuario);
-			alert(objSon.Contrasena);
+			//console.log(objSon);
+			//alert(objSon.Usuario);
+			//alert(objSon.Contrasena);
 			
-			//alert(objSon.Usuario + objSon.Contrasena);
-
-			/*else
-			{
-				var objSon = JSON.parse(respuesta);
-					alert(objSon.Id + "\n" + objSon.Marca + "\n" + objSon.Precio + "\n" + objSon.Color + "\n" + objSon.Modelo);objSon
-			}*/
+			
 		},function(respuesta){
 			alert(respuesta);
 		});

@@ -1,5 +1,8 @@
 <?php
+session_start();
+$_session['Usuario'] = $_POST['Usuario'];
 
+var_dump($_session);
 
 //var_dump($_POST);
 
@@ -8,10 +11,29 @@ $persona = array();
 $persona["Usuario"] = $_POST['Usuario'];
 $persona["Contrasena"] = $_POST['contrasena'];
 $personaJson = json_encode($persona);
-
-setcookie("Usuario", $_POST['Usuario']);
-
+//Si le ponemos valores negativos se borra la cookie
+setcookie("Usuario", $_POST['Usuario'], -1);
+//se pueden guardar muchos usuarios dentro
+//las cookies guardan un archivo en un directorio de la maquina donde corra el navegador
+//las cookies no deben guardar passwords
+//
 echo $personaJson;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* eso tendría que borrarlo.
